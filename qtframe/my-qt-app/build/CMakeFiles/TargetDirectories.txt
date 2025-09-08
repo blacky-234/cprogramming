@@ -1,0 +1,5 @@
+/home/it-user2/workspace/my-qt-app/build/CMakeFiles/myqtapp.dir
+/home/it-user2/workspace/my-qt-app/build/CMakeFiles/edit_cache.dir
+/home/it-user2/workspace/my-qt-app/build/CMakeFiles/rebuild_cache.dir
+/home/it-user2/workspace/my-qt-app/build/CMakeFiles/myqtapp_autogen_timestamp_deps.dir
+/home/it-user2/workspace/my-qt-app/build/CMakeFiles/myqtapp_autogen.dir
