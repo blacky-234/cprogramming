@@ -1,16 +1,16 @@
 cmake_minimum_required(VERSION 3.20)
-project(week1 VERSION 1.0 LANGUAGES CXX)
+project(weekone VERSION 1.0 LANGUAGES CXX)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Enable automatic MOC, UIC, and RCC (for .ui and resources later)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTORCC ON)
+find_package(Qt6 CONFIG REQUIRED COMPONENTS Core Gui Widgets)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets)
+set(CMAKE_AUTOMOC TRUE)
+set(CMAKE_AUTORCC TRUE)
+set(CMAKE_AUTOUIC TRUE)
 
 # Tell compiler to search inside "include/" folder for headers
 include_directories(${PROJECT_SOURCE_DIR}/include)
@@ -23,7 +23,7 @@ set(SOURCES
 )
 
 # Create executable
-add_executable(MyQtApp ${SOURCES})
+add_executable(weekone ${SOURCES})
 
 
-target_link_libraries(weekone PRIVATE Qt6::Widgets)
+target_link_libraries(weekone PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Gui)
